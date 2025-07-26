@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/formulario.css">
+    <title>Informativo</title>
+</head>
+<body>
+    <section>
+        <h2>Perguntinhas</h2>
+        <div class="progress-bar">
+          <div class="progress-indicator">Etapa <span id="current-step">1</span> de 6</div>
+        </div>
+        <div id="error-message" class="error-message">
+          <span class="close-btn" id="close-error-btn">×</span>
+          <span id="error-text"></span>
+        </div>
+    
+        <form action="https://formsubmit.co/theonicoleli@gmail.com" method="POST">
+          <input type="hidden" name="_next" value="https://theonicoleli.github.io/hitplace/retorno.html" />
+          <input type="hidden" name="_captcha" value="false" />
+    
+          <div class="form-step active">
+            <label>Que bom que aceitouu, havia um tempo que estava pensando nisso haha 😁</label>
+            <div class="buttons">
+              <button type="button" data-action="next">Próximo</button>
+            </div>
+          </div>
+    
+          <div class="form-step">
+            <label>Dica: Quando escolher uma opção selecionável, ela foi criada para dar apenas opções para as seleções que correspondem a ela, então qualquer coisa volta e da uma olhadaa 😉</label>
+            <div class="buttons">
+              <button type="button" data-action="prev">Voltar</button>
+              <button type="button" data-action="next">Próximo</button>
+            </div>
+          </div>
+    
+          <div class="form-step">
+            <label>Consegue no próximo fim de semana? Se não, fale um dia que você possa!!</label>
+            <div class="form">
+              <input type="text" name="dia" id="dia" class="form__input" placeholder=" " autocomplete="off" required />
+              <label for="dia" class="form__label">Digite sua resposta</label>
+            </div>
+            <div class="buttons">
+              <button type="button" data-action="prev">Voltar</button>
+              <button type="button" data-action="next">Próximo</button>
+            </div>
+          </div>
+    
+          <div class="form-step">
+            <label>Que horário fica bom para você?</label>
+            <div class="form">
+              <input type="text" name="horario" id="horario" class="form__input" placeholder=" " autocomplete="off" required />
+              <label for="horario" class="form__label">Horário</label>
+            </div>
+            <div class="buttons">
+              <button type="button" data-action="prev">Voltar</button>
+              <button type="button" data-action="next">Próximo</button>
+            </div>
+          </div>
+    
+          <div class="form-step">
+            <label>Qual tipo de serviço você quer?</label>
+            <div class="options-group">
+              <label><input type="radio" name="tipoComida" value="hamburguer" required /> Hambúrguer</label>
+              <label><input type="radio" name="tipoComida" value="pizza" required /> Pizza</label>
+              <label><input type="radio" name="tipoComida" value="churrascaria" required /> Churrascaria</label>
+              <label><input type="radio" name="tipoComida" value="cafeteria" required /> Cafeteria</label>
+              <label><input type="radio" name="tipoComida" value="musicais" required /> Musicais</label>
+              <label><input type="radio" name="tipoComida" value="bonus" required /> Bonus</label>
+            </div>
+            <div class="buttons">
+              <button type="button" data-action="prev">Voltar</button>
+              <button type="button" data-action="next">Próximo</button>
+            </div>
+          </div>
+    
+          <div class="form-step" id="step-local">
+            <label>Escolha o local:</label>
+            <div class="options-group" id="opcoes-local"></div>
+            <div class="buttons">
+              <button type="button" data-action="prev">Voltar</button>
+              <button type="submit">Enviar</button>
+            </div>
+          </div>
+        </form>
+    </section>
+
+    <div id="emoji-explosion" style="pointer-events:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;"></div>
+
+    <script src="js/formulario.js"></script>
+    <style>@keyframes explode{0%{transform:translateY(0);opacity:1}100%{transform:translateY(-200px);opacity:0}}</style>
+</body>
+</html>
